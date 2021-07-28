@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/mulmrakebb4yk34o?svg=true)](https://ci.appveyor.com/project/MKSInc/ahj-hw-9-anim-1-collapse-2-callback-chat-3-liker)
+### [Gh-page](https://mksinc.github.io/AHJ-hw.-9-Anim.-1-Collapse.-2-Callback-chat.-3-Liker/)
 # 9. Домашнее задание к лекции «Анимации и CSS»
 
 Правила сдачи задания:

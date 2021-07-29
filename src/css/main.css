@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  /* background-color: #767676; */
+  background-color: #f2f2f2;
   padding-top: 10px;
 }
 
@@ -32,4 +32,12 @@ h2 span {
 
 .container {
   padding: 15px;
+}
+
+.content {
+  width: 33.33%;
+}
+
+.widget-collapse {
+  margin-bottom: 20px;
 }

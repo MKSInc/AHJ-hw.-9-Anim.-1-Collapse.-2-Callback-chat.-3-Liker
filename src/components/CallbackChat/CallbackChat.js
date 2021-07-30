@@ -11,6 +11,7 @@ export default class CallbackChat {
       form: null,
     };
 
+    this.isChatBodyHidden = true;
     this.init();
   }
 
@@ -25,6 +26,10 @@ export default class CallbackChat {
     this.els.btnActive.addEventListener('click', this.onBtnActiveClick.bind(this));
 
     this.els.chatBody = this.element.querySelector('.widget-callback-chat__body');
+    this.els.chatBody.addEventListener('transitionend', () => {
+      if (this.isChatBodyHidden) this.els.chatBody.classList.add('_hide');
+    });
+
     this.els.btnClose = this.element.querySelector('.widget-callback-chat__btn-close');
     this.els.btnClose.addEventListener('click', this.onBtnCloseClick.bind(this));
 
@@ -36,14 +41,15 @@ export default class CallbackChat {
 
   onBtnActiveClick() {
     this.els.btnActive.classList.add('widget-callback-chat__btn-active_hidden');
+    this.isChatBodyHidden = false;
     this.els.chatBody.classList.remove('_hide');
-    setTimeout(() => { this.els.chatBody.classList.add('widget-callback-chat__body_large'); }, 1);
+    setTimeout(() => { this.els.chatBody.classList.add('widget-callback-chat__body_large'); }, 0);
   }
 
   onBtnCloseClick() {
     this.els.btnActive.classList.remove('widget-callback-chat__btn-active_hidden');
+    this.isChatBodyHidden = true;
     this.els.chatBody.classList.remove('widget-callback-chat__body_large');
-    setTimeout(() => { this.els.chatBody.classList.add('_hide'); }, 100);
   }
 
   // eslint-disable-next-line class-methods-use-this
